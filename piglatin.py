@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 def main():
-        lst = ['sh', 'gl', 'ch', 'ph', 'tr', 'br', 'fr', 'bl', 'gr', 'st', 'sl', 'cl', 'pl', 'fl']
+        lst = ['sh', 'gl', 'ch', 'ph', 'tr', 'br', 'fr', 'bl', 'gr', 'st', 'sl', 'cl', 'pl', 'fl', 'th']
         sentence = input('Type what you would like translated into pig-latin and press ENTER: ')
         sentence = sentence.split()
         for k in range(len(sentence)):
