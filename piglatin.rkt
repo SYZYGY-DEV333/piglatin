@@ -12,8 +12,8 @@
         (cond 
             [(member? (car i) '(#\a #\e #\i #\o #\u))
                 (string-append word "ay")]
-            [(member? (string-append (list->string (flatten (list (car i) (cdr i))))) lst)
-                (string-append (list->string (flatten (list (drop i 2)) (list->string (take i 2)))) "ay")]
+            [(member? (string-append (list->string (flatten (take i 2)))) lst)
+                (string-append (list->string (flatten (drop i 2))) (list->string (flatten (take i 2))) "ay")]
             [(not (regexp-match #rx"^[A-Za-z]+$" word))
                 word]
             [else (string-append (list->string (flatten (list (drop i 1) (car i)))) "ay")])))
